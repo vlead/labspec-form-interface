@@ -10,14 +10,12 @@
   </head>
   <body>   
     <br><br>
-    <h3 align='center'>VLEAD-DASHBOARD</h3>
+    <h3 align='center'>VLABS-SPEC-FORM</h3>
     <br><br>
     <div class="container">
       <form class="form-horizontal">
 	<div class="form-group">
-	  <label  class="col-sm-4 control-label">DISCIPLINE </label><BR><BR>
-	</div>
-	<div class="form-group">
+	  <label  class="col-sm-4 control-label">DISCIPLINE : </label><BR><BR>
 	  <label  class="col-sm-4 control-label">Name</label>
 	  <div class="col-sm-2">
 	    <select class="form-control"  id="disc-list">
@@ -25,8 +23,8 @@
 	    </select>
 	  </div>
 	</div>
-	<BR><BR>
-	<label  class="col-sm-4 control-label">DEVELOPER </label><BR><BR>
+	<br>
+	<label  class="col-sm-4 control-label">DEVELOPER : </label><BR><BR>
 	<div class="form-group">
 	  <label  class="col-sm-4 control-label">Name</label>
 	  <div class="col-sm-4">
@@ -49,7 +47,7 @@
 	</div>
 	<BR><BR>
 	<div class="form-group">
-	  <label  class="col-sm-4 control-label">LAB DETAILS </label><BR><BR><BR>
+	  <label  class="col-sm-4 control-label">LAB DETAILS : </label><BR><BR><BR>
 	  <label class="col-sm-4 control-label">Name</label>
 	  <div class="col-sm-4">
 	    <input type="text" class="form-control" id="lab_name" placeholder="Enter lab name">
@@ -141,20 +139,20 @@
 	  <label  class="col-sm-4 control-label">Build-Requirements :</label><br><br><br>
 	  <label  class="col-sm-4 control-label">Architecture</label>
 	  <div class="col-sm-2">
-	    <input type="text" class="form-control" id="slug" placeholder="Enter slug here">
+	    <input type="text" class="form-control" id="arch" placeholder="Enter architecture here">
 	  </div>
 	</div>
 	<div class="form-group">
 	  <label  class="col-sm-4 control-label">Build-Command</label>
 	  <div class="col-sm-2">
-	    <input type="text" class="form-control" id="slug" placeholder="Enter slug here">
+	    <input type="text" class="form-control" id="build" placeholder="Enter slug here">
 	  </div>
 	</div>	
 
 	<div class="form-group">
 	  <label  class="col-sm-4 control-label">Configure commands</label>
 	  <div class="col-sm-3">
-	  <textarea class="form-control" rows="3">
+	  <textarea class="form-control" rows="3" id="config_command">Enter commands here
 	  </textarea>
 	  <font color="red">Note: Seperate commands by new line</font>
 	  </div>
@@ -162,7 +160,7 @@
 	<div class="form-group">
 	  <label  class="col-sm-4 control-label">Pre-build commands</label>
 	  <div class="col-sm-3">
-	  <textarea class="form-control" rows="3">
+	  <textarea class="form-control" rows="3" id="pre_build">
 	  </textarea>
 	  <font color="red">Note: Seperate commands by new line</font>
 	  </div>
@@ -170,9 +168,37 @@
 	<div class="form-group">
 	  <label  class="col-sm-4 control-label">Post-build commands</label>
 	  <div class="col-sm-3">
-	  <textarea class="form-control" rows="3">
+	  <textarea class="form-control" rows="3" id="post_build">
 	  </textarea>
 	  <font color="red">Note: Seperate commands by new line</font>
+	  </div>
+	</div>
+
+	<div class="form-group">
+	  <label  class="col-sm-4 control-label">Status</label>
+	  <div class="col-sm-2">
+	    <input type="text" class="form-control" id="status" placeholder="Enter status here">
+	  </div>
+	</div>
+	
+	<div class="form-group">
+	  <label  class="col-sm-4 control-label">OS</label>
+	  <div class="col-sm-2">
+	    <input type="text" class="form-control" id="os" placeholder="Enter os name here">
+	  </div>
+	</div>
+	
+	<div class="form-group">
+	  <label  class="col-sm-4 control-label">OS-Version</label>
+	  <div class="col-sm-2">
+	    <input type="text" class="form-control" id="os_version" placeholder="Enter os version">
+	  </div>
+	</div>
+	
+	<div class="form-group">
+	  <label  class="col-sm-4 control-label">Service pack</label>
+	  <div class="col-sm-2">
+	    <input type="text" class="form-control" id="service" placeholder="Enter service pack here">
 	  </div>
 	</div>
 
@@ -180,7 +206,7 @@
 	  <label  class="col-sm-4 control-label">Runtime-Requirements :</label><br><br><br>
 	  <label  class="col-sm-4 control-label">Installer commands</label>
 	  <div class="col-sm-3">
-	  <textarea class="form-control" rows="3">
+	  <textarea class="form-control" rows="3" id="inst_commands">
 	  </textarea>
 	  <font color="red">Note: Seperate commands by new line</font>
 	  </div>
@@ -190,7 +216,7 @@
 	  <label  class="col-sm-4 control-label">Lab-action commands :</label><br><br><br>
 	  <label  class="col-sm-4 control-label">Backup commands</label>
 	  <div class="col-sm-3">
-	  <textarea class="form-control" rows="3">
+	  <textarea class="form-control" rows="3" id="back_commands">
 	  </textarea>
 	  <font color="red">Note: Seperate commands by new line</font>
 	  </div>
@@ -199,12 +225,33 @@
 	<div class="form-group">
 	  <label  class="col-sm-4 control-label">Init commands</label>
 	  <div class="col-sm-3">
-	  <textarea class="form-control" rows="3">
+	  <textarea class="form-control" rows="3" id="init_commands">
 	  </textarea>
 	  <font color="red">Note: Seperate commands by new line</font>
 	  </div>
 	</div>
+	
+	<div class="form-group">
+	  <label  class="col-sm-4 control-label">Start</label>
+	  <div class="col-sm-2">
+	    <input type="text" class="form-control" id="start" placeholder="Enter slug here">
+	  </div>
+	</div>
 
+	<div class="form-group">
+	  <label  class="col-sm-4 control-label">Stop</label>
+	  <div class="col-sm-2">
+	    <input type="text" class="form-control" id="stop" placeholder="Enter slug here">
+	  </div>
+	</div>
+
+	<div class="form-group">
+	  <label  class="col-sm-4 control-label">Min Storage Required</label>
+	  <div class="col-sm-2">
+	    <input type="text" class="form-control" id="storage" placeholder="Enter slug here">
+	  </div>
+	</div>
+	
 	<div class="form-group">
 	  <div class="col-sm-offset-3 col-sm-4">
 	    <button type="submit" class="btn btn-default">Download JSON</button>
