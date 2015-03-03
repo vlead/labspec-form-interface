@@ -7,10 +7,17 @@
     <link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel="stylesheet">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>    
     <script type="text/javascript" src="{{ url_for('static', filename='js/myfunctions.js') }}"></script>
+    <script type="text/template" id="repeating-form-section-template">
+      <div class="form-group">
+       <div class="col-sm-12">
+	 <select id="'+x+'" class="form-control">
+	   <option value="">Select</option>
+	 </select><a href="#" class="remove_field">Remove</a></div></div>
+    </script>
   </head>
   <body>   
     <br><br>
-    <h3 align='center'>VLABS-SPEC-FORM</h3>
+    <h3 align='center'>VLABS-DEPLOY-SPEC-FORM</h3>
     <br><br>
     <div class="container">
       <form class="form-horizontal">
@@ -120,7 +127,7 @@
 	<div class="form-group">
 	  <label  class="col-sm-4 control-label">Technologies used</label>
 	  <button class="add_field_button btn btn-default">Add More</button>&nbsp;&nbsp;&nbsp;&nbsp;
-	  <button class="add_new_field_button btn btn-default" id="target" onclick="new_tech();">Add New</button>
+	  <!--<button class="add_new_field_button btn btn-default" id="target" onclick="new_tech();">Add New</button>-->
 	  <div class="col-sm-2">
 	    <select class="form-control" id="tech-list">
 	      <option>Select</option>  

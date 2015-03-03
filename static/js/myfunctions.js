@@ -57,10 +57,11 @@ $(document).ready(function() {
 	
 	var wrapper         = $("#tech"); //Fields wrapper
 	var add_button      = $(".add_field_button"); //Add button ID
-	x = 1;
+	var x = 1;
 	$(add_button).click(function(e){ //on add input button click
 		e.preventDefault();
-		$(wrapper).append('<div class="form-group"><div class="col-sm-12"><select id="'+x+'" class="form-control"><option value="">Select</option></select><a href="#" class="remove_field">Remove</a></div></div><p>'); //add input box
+		var a=$("#repeating-form-section-template").html();
+		$(wrapper).append(a);
 		$(document).ready(function() {
 			$.ajax({
 				type: "GET",
@@ -83,7 +84,7 @@ $(document).ready(function() {
 	    });
 
 // To display new technology div 
-
+/*
 function new_tech()
 {
     document.getElementById("add").innerHTML = "<div id='load_tech();'>New tech <input type='text' id='tech_value'></input>&nbsp;&nbsp;FOSS&nbsp;&nbsp;<select id='foss'><option value='None'>Select</option><option value='1'>Yes</option><option value='0'>No</option></select>&nbsp;&nbsp;<button id='submit-tech'>save</button></div>";
@@ -164,7 +165,7 @@ function load_tech()
 		x--;
 	    })
 
-	    /*
+	    
     $(function() {
 	    $(document).ready(function() {
 		    $.ajax({
@@ -180,7 +181,8 @@ function load_tech()
 			});    
 		});
 	});
-	    */
+	    
     
 }
 
+*/
