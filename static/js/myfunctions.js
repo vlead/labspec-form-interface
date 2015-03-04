@@ -1,4 +1,51 @@
-// To display discipline list 
+$(function() 
+  {
+      $("#one").click(function(event) {
+	      event.preventDefault();
+	      var total=[];
+	      total[0] = $( "#disc-list" ).val();
+	      total[1] = $( "#inst-list" ).val();
+	      total[2] = $( "#int-level" ).val();
+	      total[3] = $( "#phase-id" ).val();
+	      total[4] = $( "#web-id" ).val();
+	      total[5] = $( "#lab-type" ).val();
+	      total[6] = $( "#tech-list" ).val();
+	      total[7] = $( "#dev_name" ).val();
+	      total[8] = $( "#email_id" ).val();
+	      total[9] = $( "#lab_name" ).val();
+	      total[10] = $( "#slug" ).val();
+	      total[11] = $( "#arch" ).val();
+	      total[12] = $( "#build" ).val();
+	      total[13] = $( "#config_command" ).val();
+	      total[14] = $( "#storage" ).val();
+	      total[15] = $( "#stop" ).val();
+	      total[16] = $( "#start" ).val();
+	      total[17] = $( "#init_commands" ).val();
+	      total[18]= $( "#back_commands" ).val();
+	      total[19]= $( "#inst_commands" ).val();
+	      total[20]= $( "#service" ).val();
+	      total[21]= $( "#os" ).val();
+	      total[22]= $( "#os_version" ).val();
+	      total[23]= $( "#post_build" ).val();
+	      total[24]= $( "#config_command" ).val();
+	      total[25]= $( "#repo_url" ).val();
+	      total[26]= $( "#total_exp" ).val(); 
+	      total[27]= $( "#pre_build" ).val();
+	      total[28]= $( "#status" ).val(); 
+	     
+	      for (var i=0;i<total.length;i++)
+		  {
+		      if(total[i] == "")
+			  {
+			      alert("Please fill all form");
+			      return false;
+			  }
+		  }
+	      alert("downloaded");
+
+	      
+	  });
+  });
 
 $(function() {
 	$(document).ready(function() {
